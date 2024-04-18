@@ -4,6 +4,8 @@ const mysql = require("mysql2")
 const app = express()
 const port = 8800
 
+app.use(express.json())
+
 const pool = mysql.createPool({
   host: "localhost",
   user: "root",
@@ -25,10 +27,15 @@ app.get("/books", (req, res) => {
 
 app.post("/books", (req, res) => {
   const q = "INSERT INTO books (`title`,`desc`,`cover_img`,`price`) VALUES (?)"
-  const values = ["BookServer", "DescServer", "imageserver.png", "45"]
+  const values = [
+    req.body.title,
+    req.body.desc,
+    req.body.cover_img,
+    req.body.price,
+  ]
   pool.query(q, [values], (err, result) => {
     if (err) return res.json(err)
-    return console.log("POST success from book server")
+    return res.json("POST success from book server")
   })
 })
 
