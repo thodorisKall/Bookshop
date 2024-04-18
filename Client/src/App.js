@@ -1,21 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
+import Books from "./pages/Books"
+import Add from "./pages/Add"
+import Update from "./pages/Update"
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Books />} />
+          <Route path='add' element={<Add />} />
+          <Route path='update' element={<Update />} />
+          {/* <Route path='*' element={<NoMatch />} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
