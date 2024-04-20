@@ -18,6 +18,8 @@ const Books = () => {
     fetchAllBooks()
   }, [])
 
+  const handleDelete = async () => {}
+
   return (
     <div>
       <h1>BookShop where you can Explore the best Sellers</h1>
@@ -30,6 +32,10 @@ const Books = () => {
               {book.cover_img && <img src={book.cover_img} alt={book.title} />}
             </div>
             <h3>{book.price}</h3>
+            <button>
+              <Link to='/update'>Update</Link>
+            </button>
+            <button>Delete</button>
             <h5>--------------</h5>
           </div>
         )
