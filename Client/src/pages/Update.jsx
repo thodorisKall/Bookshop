@@ -2,6 +2,7 @@ import React from "react"
 import { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import axios from "axios"
+import "../update.css"
 
 const Update = () => {
   const [newBook, setNewBook] = useState({
@@ -36,16 +37,16 @@ const Update = () => {
   }
 
   return (
-    <div>
+    <div className='update'>
       <h2>Add New Book</h2>
-      <form>
+      <form className='update_form'>
         <input
           type='text'
           placeholder='title of the Book'
           onChange={handleChange}
           name='title'
         />
-        <input
+        <textarea
           type='text'
           placeholder='A description about the Book'
           onChange={handleChange}
@@ -64,7 +65,9 @@ const Update = () => {
           name='price'
         />
       </form>
-      <button onClick={handleUpdate}>Update</button>
+      <button id='update_btn' onClick={handleUpdate}>
+        Update
+      </button>
     </div>
   )
 }
