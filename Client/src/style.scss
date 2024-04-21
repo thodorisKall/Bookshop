@@ -1,14 +1,12 @@
 @import "./utils/_variables";
 
 .app {
-  border: green solid 4px;
   width: 100%;
   height: 100%;
 }
 
 .books {
   background-color: $smoke-white;
-  border: 2px red solid;
   height: 100%;
 
   h1 {
@@ -79,13 +77,10 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    // margin-top: 5rem;
     a {
       text-decoration: none;
       color: $black;
       font-size: 2rem;
     }
   }
-
-  // Update
 }
