@@ -2,6 +2,7 @@ import React from "react"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
+import { BsTrash3 } from "react-icons/bs"
 
 const Books = () => {
   const [books, setBooks] = useState([])
@@ -28,26 +29,36 @@ const Books = () => {
   }
 
   return (
-    <div>
-      <h1>BookShop where you can Explore the best Sellers</h1>
-      {books.map((book) => {
-        return (
-          <div key={book.id}>
-            <h2>{book.title}</h2>
-            <h2>{book.desc}</h2>
-            <div>
-              {book.cover_img && <img src={book.cover_img} alt={book.title} />}
+    <div className='books'>
+      <h1>BookShop </h1>
+      <section className='books_grid'>
+        {books.map((book) => {
+          return (
+            <div className='books_item' key={book.id}>
+              <div className='books_item_content'>
+                {book.cover_img && (
+                  <img src={book.cover_img} alt={book.title} />
+                )}
+                <div className='books_item_text'>
+                  <h2>{book.title}</h2>
+                  <h3>{book.desc}</h3>
+                  <h3>{book.price}$</h3>
+                </div>
+              </div>
+              <div className='books_item_buttons'>
+                <button id='update_btn'>
+                  <Link to={`/update/${book.id}`}>Update</Link>
+                </button>
+                <button id='trash_btn' onClick={() => handleDelete(book.id)}>
+                  <BsTrash3 />
+                </button>
+              </div>
             </div>
-            <h3>{book.price}</h3>
-            <button>
-              <Link to={`/update/${book.id}`}>Update</Link>
-            </button>
-            <button onClick={() => handleDelete(book.id)}>Delete</button>
-            <h5>--------------</h5>
-          </div>
-        )
-      })}
-      <button>
+          )
+        })}
+      </section>
+
+      <button id='addNew_btn'>
         <Link to='/add'>Add New Book</Link>
       </button>
     </div>
