@@ -50,6 +50,23 @@ app.delete("/books/:id", (req, res) => {
   })
 })
 
+app.put("/books/:id", (req, res) => {
+  const bookId = req.params.id
+  const q =
+    "UPDATE books SET title=?, `desc`=?, cover_img=?, price=? WHERE id =?"
+  const values = [
+    req.body.title,
+    req.body.desc,
+    req.body.cover_img,
+    req.body.price,
+  ]
+
+  pool.query(q, [...values, bookId], (err, results) => {
+    if (err) return console.log(`Error on Update the Book ${err.message}`)
+    return console.log(`Book Updated successfully ${results}`)
+  })
+})
+
 // Run Server
 app.listen(port, () => {
   console.log(`Listening on Port: ${port}`)
