@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import axios from "axios"
 import "../update.css"
+import Return from "./Return"
 
 const Update = () => {
   const [newBook, setNewBook] = useState({
@@ -38,7 +39,7 @@ const Update = () => {
 
   return (
     <div className='update'>
-      <h2>Add New Book</h2>
+      <h2>Update Book</h2>
       <form className='update_form'>
         <input
           type='text'
@@ -68,6 +69,7 @@ const Update = () => {
       <button id='update_btn' onClick={handleUpdate}>
         Update
       </button>
+      <Return />
     </div>
   )
 }
