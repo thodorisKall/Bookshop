@@ -1,13 +1,17 @@
-.update {
+.update,
+.add {
+  padding: 10rem;
+
   h2 {
     text-align: center;
+    margin-bottom: 3rem;
   }
 
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 1rem;
+    row-gap: 2rem;
   }
 
   input,
@@ -22,10 +26,29 @@
     height: 3.2rem;
   }
 
-  #update_btn {
-    margin-top: 2rem;
+  .button_style {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 2rem;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .button_style:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  #update_btn {
+    @extend .button_style;
+    background-color: #8fbc8f;
+  }
+
+  #save_btn {
+    @extend .button_style;
+    background-color: #ffa343;
   }
 }

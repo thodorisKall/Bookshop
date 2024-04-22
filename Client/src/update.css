@@ -1,26 +1,58 @@
-.update h2 {
-  text-align: center;
+.update,
+.add {
+  padding: 10rem;
 }
-.update form {
+.update h2,
+.add h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.update form,
+.add form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
 .update input,
-.update textarea {
+.update textarea,
+.add input,
+.add textarea {
   padding-left: 10px;
   width: 40%;
   height: 2rem;
 }
-.update textarea {
+.update textarea,
+.add textarea {
   padding-left: 10px;
   width: 40%;
   height: 3.2rem;
 }
-.update #update_btn {
-  margin-top: 2rem;
+.update .button_style, .update #save_btn, .update #update_btn,
+.add .button_style,
+.add #save_btn,
+.add #update_btn {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 2rem;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+.update .button_style:hover, .update #save_btn:hover, .update #update_btn:hover,
+.add .button_style:hover,
+.add #save_btn:hover,
+.add #update_btn:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+.update #update_btn,
+.add #update_btn {
+  background-color: #8fbc8f;
+}
+.update #save_btn,
+.add #save_btn {
+  background-color: #ffa343;
 }/*# sourceMappingURL=update.css.map */
