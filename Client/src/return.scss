@@ -1,0 +1,18 @@
+@import "./utils/_variables";
+
+.return {
+  position: absolute;
+  bottom: 5rem;
+  left: 5rem;
+  //border: 2px solid red;
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
+
+  a {
+    font-size: 2rem;
+    color: $black;
+  }
+}

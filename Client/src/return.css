@@ -1,0 +1,13 @@
+.return {
+  position: absolute;
+  bottom: 5rem;
+  left: 5rem;
+}
+.return button {
+  border: none;
+  background-color: transparent;
+}
+.return a {
+  font-size: 2rem;
+  color: #242124;
+}/*# sourceMappingURL=return.css.map */
