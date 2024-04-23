@@ -10,7 +10,8 @@ The project is currently not deployed on a URL.
 
 ## 3. Description
 
-The Book Shop Web App features a straightforward React user interface, providing users with the ability to view available books, update their details via dedicated forms screens, delete books with a simple button, and add new books from scratch. The frontend utilizes React Router for navigation.
+The Book Shop Web App features a straightforward React user interface, providing![BookShop](https://github.com/thodorisKall/Bookshop/assets/105176440/f9f8022f-1393-49a6-9741-0d831525d10a)
+ users with the ability to view available books, update their details via dedicated forms screens, delete books with a simple button, and add new books from scratch. The frontend utilizes React Router for navigation.
 
 ## 4. Outcome
 
